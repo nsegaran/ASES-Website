@@ -1,7 +1,5 @@
 import React from 'react';
 import Button from '@mui/material/Button';
-import { alpha, styled } from '@mui/material/styles';
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 const ShortButtonCustomized = ({text}) => {
     return (
