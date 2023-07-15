@@ -1,14 +1,7 @@
 import React from 'react';
 import Button from '@mui/material/Button';
 import { alpha, styled } from '@mui/material/styles';
-
-
-// const LongButton = styled(Button)({
-//     color: 'white',
-//     backgroundColor: 'black',
-//     padding: 8,
-//     borderRadius: 4,
-//   });
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 const LongButtonCustomized = ({text}) => {
     return (
@@ -17,17 +10,23 @@ const LongButtonCustomized = ({text}) => {
                 sx={{
                     color: "white",
                     backgroundColor: "black",
-                    borderRadius: 5,
-                    px: 5,
+                    borderRadius: 3,
+                    px: 3,
                     py: 2,
                     fontStyle: "Inter",
                     fontSize: 22,
+                    textTransform: "none",
                     '&:hover': {
                         backgroundColor: 'white',
                         color: 'black',
                         border:"1px solid black"
                     }
-                }}>
+                }}
+                endIcon={<ArrowForwardIcon 
+                    sx={{ fontSize: 40 }}
+                    />
+                }
+                >
                 Apply to 2023-2024 ASES Bootcamp today
             </Button>
         </>
