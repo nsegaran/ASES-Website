@@ -1,5 +1,6 @@
 import './App.css';
-import LongButtonCustomized from './components/LongButton';
+import LongButtonWArrowCustomized from './components/LongButtonWithArrow';
+import LongButtonWOArrowCustomized from './components/LongButtonWOArrow';
 import ShortButtonCustomized from './components/ShortButton';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { createTheme, ThemeProvider } from '@mui/material';
@@ -17,7 +18,8 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <div className="App min-vh-100 d-flex justify-content-center align-items-center">
-        <LongButtonCustomized />
+        <LongButtonWArrowCustomized />
+        <LongButtonWOArrowCustomized />
         <ShortButtonCustomized />
       </div>
     </ThemeProvider>
