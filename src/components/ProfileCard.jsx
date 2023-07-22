@@ -8,7 +8,7 @@ import React from "react";
 import { useState } from "react";
 
 
-const ProfileCard = ({text, image}) => {
+const ProfileCard = ({name, role, hoveredText, image}) => {
     const [isHovered, setIsHovered] = useState(false);
     return (
         <>
@@ -29,33 +29,28 @@ const ProfileCard = ({text, image}) => {
                     <>
                         <CardMedia 
                         sx={{ 
-                            height: 140,
+                            height: "83%",
+                            borderBottom: "1px solid black",
                         }}
                         image={image}
                         title="Profile Image"
                         />
-                        <CardContent>
-                            <Typography variant="body2" color="text.secondary">
-                                {text.split('\n').map((line, i) => (
-                                    <React.Fragment key={i}>
-                                        {line}
-                                        <br />
-                                    </React.Fragment>
-                                ))}
+                        <CardContent sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                            <Typography color="text.primary" align="center">
+                                {name}
+                            </Typography>
+                            <Typography variant="body2" color="text.secondary" align="center">
+                                {role}
                             </Typography>
                         </CardContent>
+
                     </>
                 )}
                 {isHovered && (
                     <>
                         <CardContent>
                             <Typography variant="body2" color="white">
-                                {text.split('\n').map((line, i) => (
-                                    <React.Fragment key={i}>
-                                        {line}
-                                        <br />
-                                    </React.Fragment>
-                                ))}
+                                {hoveredText}
                             </Typography>
                         </CardContent>
                     </>

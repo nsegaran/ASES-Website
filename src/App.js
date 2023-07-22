@@ -5,6 +5,7 @@ import ShortButtonCustomized from "./components/ShortButton";
 import ProfileCard from "./components/ProfileCard";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { createTheme, ThemeProvider } from "@mui/material";
+import data from "./components/textContent/homeProfileCards.json";
 
 const theme = createTheme({
   typography: {
@@ -20,12 +21,17 @@ function App() {
         <LongButtonWOArrowCustomized />
         <ShortButtonCustomized />
       </div>
-      <div>
-        <ProfileCard
-          text="Your mom"
-          hoveredText="haley tran"
-          image="/media/haley-tran.png"
-        />
+      <div className="d-flex justify-content-center align-items-center space-x-4">
+        {data.map((d) => {
+          return (
+            <ProfileCard
+              name={d.name}
+              role={d.role}
+              hoveredText={d.description}
+              image={d.image}
+            />
+          );
+        })}
       </div>
     </ThemeProvider>
   );
