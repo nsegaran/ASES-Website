@@ -1,19 +1,16 @@
-import './App.css';
-import LongButtonWArrowCustomized from './components/LongButtonWithArrow';
-import LongButtonWOArrowCustomized from './components/LongButtonWOArrow';
-import ShortButtonCustomized from './components/ShortButton';
-import ProfileCard from './components/ProfileCard';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { createTheme, ThemeProvider } from '@mui/material';
-
+import "./App.css";
+import LongButtonWArrowCustomized from "./components/LongButtonWithArrow";
+import LongButtonWOArrowCustomized from "./components/LongButtonWOArrow";
+import ShortButtonCustomized from "./components/ShortButton";
+import ProfileCard from "./components/ProfileCard";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { createTheme, ThemeProvider } from "@mui/material";
 
 const theme = createTheme({
   typography: {
-    fontFamily: [
-      'Inter',
-      'Space Grotesk',
-    ].join(','),
-  },});
+    fontFamily: ["Inter", "Space Grotesk"].join(","),
+  },
+});
 
 function App() {
   return (
@@ -24,7 +21,11 @@ function App() {
         <ShortButtonCustomized />
       </div>
       <div>
-        <ProfileCard />
+        <ProfileCard
+          text="Your mom"
+          hoveredText="haley tran"
+          image="/media/haley-tran.png"
+        />
       </div>
     </ThemeProvider>
   );

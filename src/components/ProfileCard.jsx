@@ -1,53 +1,68 @@
 import { Box } from "@mui/material";
-import { Card, CardMedia } from "@material-ui/core/CardMedia";
+import CardMedia from '@mui/material/CardMedia';
+import Card from '@mui/material/Card';
 import { styled } from '@mui/material/styles';
+import CardContent from "@mui/material/CardContent";
+import Typography from "@mui/material/Typography";
+import React from "react";
+import { useState } from "react";
 
 
-const ProfileCard = ({text}) => {
+const ProfileCard = ({text, image}) => {
+    const [isHovered, setIsHovered] = useState(false);
     return (
         <>
             <Card sx={{
-                        width: 303,
-                        height: 395,
-                        backgroundColor: 'F8F9FC',
-                        border: "1px solid black",
-                        borderRadius: 3,
-                        '&:hover': {
-                            backgroundColor: 'black'
-                        }
-                    }}
+                width: 303,
+                height: 395,
+                backgroundColor: 'F8F9FC',
+                border: "1px solid black",
+                borderRadius: 3,
+                '&:hover': {
+                    backgroundColor: 'black'
+                }
+            }}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
             >
-                <CardMedia 
-                    // sx={{width:303}}
-                    // <CardMedia
-                    sx={{ height: 140 }}
-                    image="/static/images/cards/contemplative-reptile.jpg"
-                    title="green iguana"
-                  />
+                {!isHovered && (
+                    <>
+                        <CardMedia 
+                        sx={{ 
+                            height: 140,
+                        }}
+                        image={image}
+                        title="Profile Image"
+                        />
+                        <CardContent>
+                            <Typography variant="body2" color="text.secondary">
+                                {text.split('\n').map((line, i) => (
+                                    <React.Fragment key={i}>
+                                        {line}
+                                        <br />
+                                    </React.Fragment>
+                                ))}
+                            </Typography>
+                        </CardContent>
+                    </>
+                )}
+                {isHovered && (
+                    <>
+                        <CardContent>
+                            <Typography variant="body2" color="white">
+                                {text.split('\n').map((line, i) => (
+                                    <React.Fragment key={i}>
+                                        {line}
+                                        <br />
+                                    </React.Fragment>
+                                ))}
+                            </Typography>
+                        </CardContent>
+                    </>
+                )}
             </Card>
         </>
     );
 };
-
-
-// const ProfileCard = ({text}) => {
-//     return (
-//         <>
-//             <Box
-//                 sx={{
-//                     width: 303,
-//                     height: 395,
-//                     backgroundColor: 'F8F9FC',
-//                     border: "1px solid black",
-//                     borderRadius: 3,
-//                     '&:hover': {
-//                         backgroundColor: 'black'
-//                     }
-//                 }}
-//                 >
-//             </Box>
-//         </>
-//     );
-// };
 
 export default ProfileCard;
