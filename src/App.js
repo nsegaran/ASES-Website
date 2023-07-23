@@ -5,7 +5,10 @@ import ShortButtonCustomized from "./components/ShortButton";
 import ProfileCard from "./components/ProfileCard";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { createTheme, ThemeProvider } from "@mui/material";
-import data from "./components/textContent/homeProfileCards.json";
+import profileData from "./components/textContent/homeProfileCards.json";
+import faqData from "./components/textContent/homeFAQData.json";
+
+import FAQ from "./components/FAQ";
 
 const theme = createTheme({
   typography: {
@@ -21,8 +24,14 @@ function App() {
         <LongButtonWOArrowCustomized />
         <ShortButtonCustomized />
       </div>
-      <div className="d-flex justify-content-center align-items-center space-x-4">
-        {data.map((d) => {
+      <div className="App min-vh-100 d-flex flex-column justify-content-center align-items-center gap-2">
+        {faqData.map((d) => {
+          return <FAQ question={d.question} answer={d.answer} />;
+        })}
+      </div>
+
+      {/* <div className="flex flex-col sm:flex-row justify-content-center align-items-center space-x-4 space-y-4">
+        {profileData.map((d) => {
           return (
             <ProfileCard
               name={d.name}
@@ -32,7 +41,7 @@ function App() {
             />
           );
         })}
-      </div>
+      </div> */}
     </ThemeProvider>
   );
 }
