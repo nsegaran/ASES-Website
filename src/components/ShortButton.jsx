@@ -21,7 +21,7 @@ const ShortButtonCustomized = ({text}) => {
                     }
                 }}
                 >
-                Learn more
+                {text}
             </Button>
         </>
     );

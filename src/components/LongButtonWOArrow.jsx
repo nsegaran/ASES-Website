@@ -23,7 +23,7 @@ const LongButtonWOArrowCustomized = ({text}) => {
                     }
                 }}
                 >
-                Let's go
+                {text}
             </Button>
         </>
     );

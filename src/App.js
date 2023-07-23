@@ -20,9 +20,9 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <div className="App min-vh-100 d-flex justify-content-center align-items-center">
-        <LongButtonWArrowCustomized />
-        <LongButtonWOArrowCustomized />
-        <ShortButtonCustomized />
+        <LongButtonWArrowCustomized text="Apply to 2023-2024 Bootcamp" />
+        <LongButtonWOArrowCustomized text="Sign up" />
+        <ShortButtonCustomized text="Learn more" />
       </div>
       <div className="App min-vh-100 d-flex flex-column justify-content-center align-items-center gap-2">
         {faqData.map((d) => {
@@ -30,7 +30,7 @@ function App() {
         })}
       </div>
 
-      {/* <div className="flex flex-col sm:flex-row justify-content-center align-items-center space-x-4 space-y-4">
+      <div className="flex flex-col sm:flex-row justify-content-center align-items-center space-x-4 space-y-4">
         {profileData.map((d) => {
           return (
             <ProfileCard
@@ -41,7 +41,7 @@ function App() {
             />
           );
         })}
-      </div> */}
+      </div>
     </ThemeProvider>
   );
 }
