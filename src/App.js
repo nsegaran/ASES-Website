@@ -6,9 +6,8 @@ import ProfileCard from "./components/ProfileCard";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { createTheme, ThemeProvider } from "@mui/material";
 import profileData from "./components/textContent/homeProfileCards.json";
-import faqData from "./components/textContent/homeFAQData.json";
 import SponsorsScroll from "./components/SponsorsScroll";
-import FAQ from "./components/FAQ";
+import FAQSection from "./pages/Home Page/sections/FAQs";
 
 const theme = createTheme({
   typography: {
@@ -19,18 +18,13 @@ const theme = createTheme({
 function App() {
   return (
     <ThemeProvider theme={theme}>
+      <FAQSection />
       <div className="App min-vh-100 d-flex justify-content-center align-items-center">
         <LongButtonWArrowCustomized text="Apply to 2023-2024 Bootcamp" />
         <LongButtonWOArrowCustomized text="Sign up" />
         <ShortButtonCustomized text="Learn more" />
       </div>
       {/* <SponsorsScroll /> */}
-
-      <div className="App min-vh-100 d-flex flex-column justify-content-center align-items-center gap-2">
-        {faqData.map((d) => {
-          return <FAQ question={d.question} answer={d.answer} />;
-        })}
-      </div>
 
       <div className="flex flex-col sm:flex-row justify-content-center align-items-center space-x-4 space-y-4">
         {profileData.map((d) => {
