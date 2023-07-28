@@ -6,12 +6,15 @@ import faqData from "../../../components/textContent/homeFAQData.json";
 
 export default function FAQSection() {
   return (
-    <div className="p-4">
-      <div className="App min-vh-100 d-flex flex-column justify-content-center align-items-center gap-2">
+    <div className="d-flex flex-column justify-content-center align-items-center px-90" style={{backgroundColor: "#FCFAFF", paddingTop: "96px", paddingBottom:"96px"}}>
+      <h1 style={{fontFamily: "Space Grotesk", marginBottom: "64px", fontSize: "54px"}}>FAQ</h1>
+      <div className="App d-flex flex-column justify-content-center align-items-center gap-3">
         {faqData.map((d) => {
           return <FAQ question={d.question} answer={d.answer} />;
         })}
       </div>
+
+
     </div>
   );
 };
