@@ -27,7 +27,7 @@ const LongButtonWArrowCustomized = ({text}) => {
                     />
                 }
                 >
-                Apply to 2023-2024 ASES Bootcamp today
+                {text}
             </Button>
         </>
     );

@@ -1,53 +1,63 @@
-// import { Box } from "@mui/material";
-// import { Card, CardMedia } from "@material-ui/core/CardMedia";
-// import { styled } from '@mui/material/styles';
+import { Box } from "@mui/material";
+import CardMedia from '@mui/material/CardMedia';
+import Card from '@mui/material/Card';
+import { styled } from '@mui/material/styles';
+import CardContent from "@mui/material/CardContent";
+import Typography from "@mui/material/Typography";
+import React from "react";
+import { useState } from "react";
 
 
-// const ProfileCard = ({text}) => {
-//     return (
-//         <>
-//             <Card sx={{
-//                         width: 303,
-//                         height: 395,
-//                         backgroundColor: 'F8F9FC',
-//                         border: "1px solid black",
-//                         borderRadius: 3,
-//                         '&:hover': {
-//                             backgroundColor: 'black'
-//                         }
-//                     }}
-//             >
-//                 <CardMedia 
-//                     // sx={{width:303}}
-//                     // <CardMedia
-//                     sx={{ height: 140 }}
-//                     image="/static/images/cards/contemplative-reptile.jpg"
-//                     title="green iguana"
-//                   />
-//             </Card>
-//         </>
-//     );
-// };
+const ProfileCard = ({name, role, hoveredText, image}) => {
+    const [isHovered, setIsHovered] = useState(false);
+    return (
+        <>
+            <Card sx={{
+                width: "20vw",
+                height: "57vh",
+                backgroundColor: 'F8F9FC',
+                border: "1px solid black",
+                borderRadius: 3,
+                '&:hover': {
+                    backgroundColor: 'black'
+                }
+            }}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+            >
+                {!isHovered && (
+                    <>
+                        <CardMedia 
+                        sx={{ 
+                            height: "83%",
+                            borderBottom: "1px solid black",
+                        }}
+                        image={image}
+                        title="Profile Image"
+                        />
+                        <CardContent sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                            <Typography color="text.primary" align="center">
+                                {name}
+                            </Typography>
+                            <Typography variant="body2" color="text.secondary" align="center">
+                                {role}
+                            </Typography>
+                        </CardContent>
 
+                    </>
+                )}
+                {isHovered && (
+                    <>
+                        <CardContent>
+                            <Typography variant="body2" color="white">
+                                {hoveredText}
+                            </Typography>
+                        </CardContent>
+                    </>
+                )}
+            </Card>
+        </>
+    );
+};
 
-// // const ProfileCard = ({text}) => {
-// //     return (
-// //         <>
-// //             <Box
-// //                 sx={{
-// //                     width: 303,
-// //                     height: 395,
-// //                     backgroundColor: 'F8F9FC',
-// //                     border: "1px solid black",
-// //                     borderRadius: 3,
-// //                     '&:hover': {
-// //                         backgroundColor: 'black'
-// //                     }
-// //                 }}
-// //                 >
-// //             </Box>
-// //         </>
-// //     );
-// // };
-
-// export default ProfileCard;
+export default ProfileCard;
