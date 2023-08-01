@@ -13,8 +13,6 @@ export default function FAQSection() {
           return <FAQ question={d.question} answer={d.answer} />;
         })}
       </div>
-
-
     </div>
   );
 };
