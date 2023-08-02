@@ -1,0 +1,26 @@
+[
+  {
+    "header": "Bootcamp",
+    "description": "ASES Bootcamp is a 12-week design-thinking intensive for Stanford freshmen and sophomores that serves as a stepping stone into the world of entrepreneurship. Following an innovative, action-oriented process, students will learn to identify and prototype impactful solutions to problems they’re interested in tackling. Bootcamp culminates in a final pitch presentation, in which teams of students pitch their startup ideas to a panel of Silicon Valley investors. This is your chance to join Stanford’s closest-knit startup community!",
+    "image": "timeline-bootcamp.png",
+    "timeframe": "September - January"
+  },
+  {
+    "header": "Summit",
+    "description": "Every year we select 35 of the world's best collegiate entrepreneurs to come to Stanford and participate in a week of entrepreneurship, design, incredible guest speakers, and wicked problem solving. Summit is great for the delegates and even better for ASES members who get to expand their networks globally and gain first-hand exposure to global problems and ways of thinking.",
+    "image": "timeline-summit.png",
+    "timeframe": "February - March"
+  },
+  {
+    "header": "Launchpad",
+    "description": "We've all been high schoolers at one point so we know that high schoolers have great ideas! Launchpad is all about enabling these students to turn their ideas into realities, whether they be simple websites advances mobile apps, or fast growing businesses..",
+    "image": "timeline-launchpad.png",
+    "timeframe": "September - January"
+  },
+  {
+    "header": "VC3",
+    "description": "Every year we select 35 of the world's best collegiate entrepreneurs to come to Stanford and participate in a week of entrepreneurship, design, incredible guest speakers, and wicked problem solving. Summit is great for the delegates and even better for ASES members who get to expand their networks globally and gain first-hand exposure to global problems and ways of thinking.",
+    "image": "timeline-vc3.png",
+    "timeframe": "February - March"
+  }
+]
