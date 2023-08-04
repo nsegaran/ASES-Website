@@ -27,16 +27,18 @@ function App() {
           gap: "100px",
         }}
       >
-        {timelineData.map((d) => {
-          return (
-            <TimelineComponent
-              header={d.header}
-              description={d.description}
-              image={d.image}
-              timeframe={d.timeframe}
-            />
-          );
-        })}
+        <div className="d-flex flex-column align-items-center justify-content-center">
+          {timelineData.map((d) => {
+            return (
+              <TimelineComponent
+                header={d.header}
+                description={d.description}
+                image={d.image}
+                timeframe={d.timeframe}
+              />
+            );
+          })}
+        </div>
       </div>
 
       <FAQSection />
