@@ -15,6 +15,7 @@ export default function TimelineComponentA({
         alignItems: "start",
         paddingTop: "5rem",
         flexWrap: "wrap",
+        columnGap: "30vw",
         justifyContent: "space-between",
         alignContent: "start",
       }}
@@ -24,7 +25,7 @@ export default function TimelineComponentA({
           display: "flex",
           flexDirection: "column",
           alignItems: "flex-start",
-          gap: "50px",
+          gap: "2rem",
           maxWidth: "482px",
           flex: "1",
           marginBlockEnd: "2rem",

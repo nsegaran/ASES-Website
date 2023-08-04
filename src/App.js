@@ -21,7 +21,14 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <>
-        <div className="p-24">
+        <div
+          style={{
+            padding: "4rem",
+            "@media (max-width: 800px)": {
+              padding: "2rem",
+            },
+          }}
+        >
           <div
             className="p pt-4 justify-start"
             style={{ fontFamily: "Space Grotesk", textAlign: "left" }}
