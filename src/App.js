@@ -6,10 +6,9 @@ import ProfileCard from "./components/ProfileCard";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { createTheme, ThemeProvider } from "@mui/material";
 import FAQSection from "./pages/Home/sections/FAQs";
-import TimelineComponentA from "./components/TimelineComponent-a";
-import TimelineComponentB from "./components/TimelineComponent-b";
+import Timeline from "./pages/Home/sections/Timeline";
 import profileData from "./components/textContent/homeProfileCards.json";
-import timelineData from "./components/textContent/homeTimeline.json";
+import { motion } from "framer-motion";
 
 const theme = createTheme({
   typography: {
@@ -20,60 +19,7 @@ const theme = createTheme({
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <>
-        <div
-          style={{
-            padding: "4rem",
-            "@media (max-width: 800px)": {
-              padding: "2rem",
-            },
-          }}
-        >
-          <div
-            className="p pt-4 justify-start"
-            style={{ fontFamily: "Space Grotesk", textAlign: "left" }}
-          >
-            <h1 style={{ textAlign: "left" }}>Our Programs</h1>
-            <h3 style={{ textAlign: "left" }}>
-              What does a year for ASES look like?
-            </h3>
-          </div>
-
-          <div className="d-flex flex-column justify-between">
-            <>
-              {timelineData.map((d, index) => {
-                return (
-                  <TimelineComponentA
-                    header={d.header}
-                    description={d.description}
-                    image={d.image}
-                    timeframe={d.timeframe}
-                  />
-                );
-                // if (index % 2 === 0) {
-                //   return (
-                //     <TimelineComponentA
-                //       header={d.header}
-                //       description={d.description}
-                //       image={d.image}
-                //       timeframe={d.timeframe}
-                //     />
-                //   );
-                // } else {
-                //   return (
-                //     <TimelineComponentB
-                //       header={d.header}
-                //       description={d.description}
-                //       image={d.image}
-                //       timeframe={d.timeframe}
-                //     />
-                //   );
-                // }
-              })}
-            </>
-          </div>
-        </div>
-      </>
+      <Timeline />
 
       <FAQSection />
       {/* <div className="App min-vh-100 d-flex justify-content-center align-items-center">
