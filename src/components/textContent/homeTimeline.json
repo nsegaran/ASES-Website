@@ -6,12 +6,6 @@
     "timeframe": "September - January"
   },
   {
-    "header": "Summit",
-    "description": "Every year we select 35 of the world's best collegiate entrepreneurs to come to Stanford and participate in a week of entrepreneurship, design, incredible guest speakers, and wicked problem solving. Summit is great for the delegates and even better for ASES members who get to expand their networks globally and gain first-hand exposure to global problems and ways of thinking.",
-    "image": "/media/timeline-summit.png",
-    "timeframe": "February - March"
-  },
-  {
     "header": "Launchpad",
     "description": "We've all been high schoolers at one point so we know that high schoolers have great ideas! Launchpad is all about enabling these students to turn their ideas into realities, whether they be simple websites advances mobile apps, or fast growing businesses..",
     "image": "/media/timeline-launchpad.png",
@@ -21,6 +15,12 @@
     "header": "VC3",
     "description": "Every year we select 35 of the world's best collegiate entrepreneurs to come to Stanford and participate in a week of entrepreneurship, design, incredible guest speakers, and wicked problem solving. Summit is great for the delegates and even better for ASES members who get to expand their networks globally and gain first-hand exposure to global problems and ways of thinking.",
     "image": "/media/timeline-vc3.png",
+    "timeframe": "February - March"
+  },
+  {
+    "header": "Summit",
+    "description": "Every year we select 35 of the world's best collegiate entrepreneurs to come to Stanford and participate in a week of entrepreneurship, design, incredible guest speakers, and wicked problem solving. Summit is great for the delegates and even better for ASES members who get to expand their networks globally and gain first-hand exposure to global problems and ways of thinking.",
+    "image": "/media/timeline-summit.png",
     "timeframe": "February - March"
   }
 ]

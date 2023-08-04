@@ -1,7 +1,7 @@
 import React from "react";
 import ShortButtonCustomized from "./ShortButton";
 
-export default function TimelineComponent({
+export default function TimelineComponentA({
   header,
   description,
   image,
@@ -12,15 +12,12 @@ export default function TimelineComponent({
       style={{
         display: "flex",
         flexDirection: "row",
-        alignItems: "center",
-        padding: "5rem",
-        columnGap: "30vw",
+        alignItems: "start",
+        paddingTop: "5rem",
         flexWrap: "wrap",
-        "@media (max-width: 600px)": {
-          flexDirection: "column", // Change the width to 80%
-        },
+        justifyContent: "space-between",
+        alignContent: "start",
       }}
-      className="justify-between"
     >
       <div
         style={{
@@ -54,10 +51,10 @@ export default function TimelineComponent({
           alignItems: "flex-end",
           justifyContent: "flex-end",
           textAlign: "right",
-          "@media (max-width: 600px)": {
-            // When the viewport height is 600px or less
+          "@media (max-width: 800px)": {
             alignItems: "center",
             justifyContent: "center",
+            textAlign: "left",
           },
         }}
       >
@@ -81,7 +78,6 @@ export default function TimelineComponent({
             fontWeight: "Medium",
             fontFamily: "Inter",
             paddingBottom: "1rem",
-            textAlign: "left", // Add textAlign: "left" for text alignment
           }}
         >
           {timeframe}
