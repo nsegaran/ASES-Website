@@ -7,6 +7,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { createTheme, ThemeProvider } from "@mui/material";
 import FAQSection from "./pages/Home/sections/FAQs";
 import Timeline from "./pages/Home/sections/Timeline";
+import Hero from "./pages/Home/sections/Hero";
 import profileData from "./components/textContent/homeProfileCards.json";
 import { motion } from "framer-motion";
 
@@ -19,6 +20,7 @@ const theme = createTheme({
 function App() {
   return (
     <ThemeProvider theme={theme}>
+      <Hero />
       <Timeline />
 
       <FAQSection />
@@ -27,7 +29,7 @@ function App() {
         <LongButtonWOArrowCustomized />
         <ShortButtonCustomized />
       </div> */}
-      <div className="d-flex flex-lg-row flex-column justify-content-center align-items-center space-x-6 space-y-6">
+      {/* <div className="d-flex flex-lg-row flex-column justify-content-center align-items-center space-x-6 space-y-6">
         {profileData.map((m) => {
           return (
             <ProfileCard
@@ -38,7 +40,7 @@ function App() {
             />
           );
         })}
-      </div>
+      </div> */}
     </ThemeProvider>
   );
 }
