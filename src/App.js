@@ -6,7 +6,9 @@ import ProfileCard from "./components/ProfileCard";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { createTheme, ThemeProvider } from "@mui/material";
 import FAQSection from "./pages/Home/sections/FAQs";
-import data from "./components/textContent/homeProfileCards.json";
+import Timeline from "./pages/Home/sections/Timeline";
+import profileData from "./components/textContent/homeProfileCards.json";
+import { motion } from "framer-motion";
 
 const theme = createTheme({
   typography: {
@@ -17,6 +19,8 @@ const theme = createTheme({
 function App() {
   return (
     <ThemeProvider theme={theme}>
+      <Timeline />
+
       <FAQSection />
       {/* <div className="App min-vh-100 d-flex justify-content-center align-items-center">
         <LongButtonWArrowCustomized />
@@ -24,7 +28,7 @@ function App() {
         <ShortButtonCustomized />
       </div> */}
       <div className="d-flex flex-lg-row flex-column justify-content-center align-items-center space-x-6 space-y-6">
-        {data.map((m) => {
+        {profileData.map((m) => {
           return (
             <ProfileCard
               name={m.name}
