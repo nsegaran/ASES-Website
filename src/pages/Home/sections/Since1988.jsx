@@ -3,11 +3,12 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Since1988Image from "../../../images/Since1988Image.png"
 import TypingText from "../../../components/TypingText.jsx"
+import MenuIcon from "@mui/icons-material/Menu"
 
 export default function Since1988() {
   return (
     <Box
-      sx={{ background: "white", height: "500px", borderBottom: "1px solid black", display: "flex", "@media (max-width: 600px)": {
+      sx={{ backgroundColor: "#FCFAFF", height: "500px", borderBottom: "1px solid black", display: "flex", "@media (max-width: 600px)": {
         flexDirection: "column",
       },}}
     >
@@ -22,7 +23,7 @@ export default function Since1988() {
             fontSize: "54px",
             color: "#4470B6",
             marginBottom: "3%",
-            textAlign: "center",
+            textAlign: "left",
             "@media (max-width: 800px)": {
               marginBottom: "0px",
             }
