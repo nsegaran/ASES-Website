@@ -13,8 +13,8 @@ const ProfileCard = ({name, role, hoveredText, image}) => {
     return (
         <>
             <Card sx={{
-                width: "20vw",
-                height: "57vh",
+                width: "300px",
+                height: "400px",
                 backgroundColor: 'F8F9FC',
                 border: "1px solid black",
                 borderRadius: 3,
