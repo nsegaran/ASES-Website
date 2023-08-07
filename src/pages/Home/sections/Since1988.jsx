@@ -7,14 +7,17 @@ import TypingText from "../../../components/TypingText.jsx"
 export default function Since1988() {
   return (
     <Box
-      sx={{ background: "white", height: "500px", borderBottom: "1px solid black", display: "flex", "@media (max-width: 600px)": {
-        flexDirection: "column",
+      sx={{ background: "white", height: "500px", display: "flex", "@media (max-width: 600px)": {
+        flexDirection: "column", height: "1000px"
       },}}
     >
       <Box sx={{ flex: 1, borderRight: "1px solid black", padding: "3rem", "@media (max-width: 800px)": {
         padding: "1rem",
       },"@media (min-width: 600px)": {
-        overflow: "scroll",
+        overflow: "scroll"
+      },"@media (max-width: 600px)": {
+        padding: "3rem",
+        borderBottom: "1px solid black"
       },}}>
         <TypingText
           textStyle={{
@@ -22,10 +25,7 @@ export default function Since1988() {
             fontSize: "54px",
             color: "#4470B6",
             marginBottom: "3%",
-            textAlign: "center",
-            "@media (max-width: 800px)": {
-              marginBottom: "0px",
-            }
+            textAlign: "left",
           }}
           words={["Since 1988"]}
           noDelete={true}
@@ -41,9 +41,10 @@ export default function Since1988() {
           beyond Silicon Valley and solve global problems.
         </Typography>
       </Box>
-      <Box style={{ flex: 1, maxWidth: "630px", backgroundColor: "rgba(236, 132, 140, 0.44)", overflow: "hidden"}}>
-        <img src={Since1988Image} alt={"Since1988Image"} style={{height: "500px", position: "absolute"}}></img>
-      </Box>
+      <Box style={{ flex: 1, backgroundColor: "rgba(236, 132, 140, 0.44)", overflow: "hidden", height: "500px", width: "700px" }}>
+  <img src={Since1988Image} alt={"Since1988Image"} style={{ height: "100%", width: "100%", objectFit: "cover" }} />
+</Box>
+
     </Box>
-  );
+  )
 }

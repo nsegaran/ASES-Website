@@ -27,7 +27,7 @@ export default function Testimonials() {
   return (
     <Box
       sx={{
-        borderBottom: "1px solid black",
+        borderBottom: "1px solid black", borderTop: "1px solid black",
         position: "relative",
         overflow: "hidden",
       }}
@@ -50,7 +50,7 @@ export default function Testimonials() {
       </video>
       <Box
         sx={{
-          padding: "3rem",
+          padding: "5rem",
           "@media (max-width: 800px)": {
             padding: "1rem",
           },

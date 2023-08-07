@@ -9,6 +9,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { createTheme, ThemeProvider } from "@mui/material";
 import FAQSection from "./pages/Home/sections/FAQs";
 import Timeline from "./pages/Home/sections/Timeline";
+import Since1988 from "./pages/Home/sections/Since1988";
 import Testimonials from "./pages/Home/sections/Testimonials";
 import profileData from "./components/textContent/homeProfileCards.json";
 import { motion } from "framer-motion";
@@ -23,6 +24,7 @@ function App() {
   return (
     <ThemeProvider theme={theme} sx={{display: "flex", flexDirection: "column", height: "100vh"}}>
       <TopBar/>
+      <Since1988 />
       <Testimonials/>
       <Timeline />
       <FAQSection />
