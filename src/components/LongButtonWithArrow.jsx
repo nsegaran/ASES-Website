@@ -8,18 +8,18 @@ const LongButtonWArrowCustomized = ({text}) => {
         <>
             <Button
                 sx={{
-                    color: "white",
-                    backgroundColor: "black",
+                    color: "black",
+                    backgroundColor: "white",
                     borderRadius: 3,
                     px: 3,
                     py: 2,
                     fontStyle: 'Inter',
-                    fontSize: 22,
+                    fontSize: 16,
+                    border:"1px solid black",
                     textTransform: "none",
                     '&:hover': {
-                        backgroundColor: 'white',
-                        color: 'black',
-                        border:"1px solid black"
+                        backgroundColor: 'black',
+                        color: 'white',
                     }
                 }}
                 endIcon={<ArrowForwardIcon 
