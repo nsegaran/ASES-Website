@@ -1,0 +1,13 @@
+# Ignore Babel cache files
+node_modules/.cache/
+
+# Ignore log files
+*.log
+
+# Ignore compiled output
+dist/
+build/
+
+# Ignore specific files
+config.js
+secret_key.txt
