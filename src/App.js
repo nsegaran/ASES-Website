@@ -13,6 +13,7 @@ import Since1988 from "./pages/Home/sections/Since1988";
 import Testimonials from "./pages/Home/sections/Testimonials";
 import profileData from "./components/textContent/homeProfileCards.json";
 import { motion } from "framer-motion";
+import SVGAnimation from "./components/SVGAnimation"
 
 const theme = createTheme({
   typography: {
@@ -24,6 +25,7 @@ function App() {
   return (
     <ThemeProvider theme={theme} sx={{display: "flex", flexDirection: "column", height: "100vh"}}>
       <TopBar/>
+      <SVGAnimation />
       <Since1988 />
       <Testimonials/>
       <Timeline />
