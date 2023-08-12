@@ -1,47 +1,19 @@
 import React from "react";
 import LongButtonWArrowCustomized from "../../../components/LongButtonWithArrow";
-import heroVidChrome from "../../../videos/ases-hero-vid-vp9-chrome.webm";
-import heroVidSafari from "../../../videos/ases-hero-vid-hevc-safari.mp4";
-import "./hero.css";
+import heroVidChrome from "../../../videos/hero-video-hevc-safari.mp4";
+import heroVidSafari from "../../../videos/hero-video-vp9-chrome.webm";
+import styles from "./hero.css";
 
 export default function Hero() {
   return (
-    <div
-      class="mother div"
-      style={{
-        display: "flex",
-        alignItems: "start",
-        paddingTop: "5rem",
-        justifyContent: "space-between",
-        flexDirection: "row",
-        // flexWrap: "wrap",
-        // gap: "10%",
-        "@media screen and (max-width: 800px)": {
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-          paddingTop: "2rem",
-          paddingBottom: "2rem",
-        },
-      }}
-    >
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "flex-start",
-          gap: "2rem",
-          flex: "1",
-          paddingLeft: "5rem",
-          justifyContent: "flex-start",
-          minWidth: "40%", // Increase the width to make the div larger
-        }}
-      >
+    <div className="d-flex pt-8 laptop:flex-row mobile:flex-col px-8 mobile:px-0 w-full mobile:gap-y-8 tablet:gap-x-10">
+      <div className="d-flex flex-col flex laptop:pt-9 laptop:pl-9 laptop:items-start mobile:items-center gap-y-10 mobile:px-8 laptop:ps-10 tablet:ms-10 mobile:text-center laptop:text-left">
         <h1
           style={{
-            fontSize: "calc(30px + 2vmin)",
+            fontSize: "calc(16px + 5vmin)",
             fontFamily: "Space Grotesk",
           }}
+          className="laptop:w-2/5"
         >
           Stanford's premier entrepreneurship society
         </h1>
@@ -49,23 +21,14 @@ export default function Hero() {
           text={"Apply to 2023-2024 ASES Bootcamp today"}
         />
       </div>
-      <div
-        style={{
-          flex: "1",
-          // display: "flex",
-          height: "100%",
-        }}
-      >
+      <div className="flex align-end justify-center pt-5">
         <video
           autoPlay
           loop
           muted
           style={{
-            width: "100vw",
-            backgroundColor: "transparent",
-            height: "750px",
+            height: "70vh",
             objectFit: "cover",
-            alignSelf: "center",
           }}
         >
           <source src={heroVidChrome} type='video/mp4; codecs="hvc1"' />
