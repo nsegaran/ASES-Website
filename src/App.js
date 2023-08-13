@@ -8,6 +8,7 @@ import { createTheme, ThemeProvider } from "@mui/material";
 import FAQSection from "./pages/Home/sections/FAQs";
 import Timeline from "./pages/Home/sections/Timeline";
 import profileData from "./components/textContent/homeProfileCards.json";
+import Bootcamp from "./pages/Bootcamp Page/Bootcamp";
 import { motion } from "framer-motion";
 
 const theme = createTheme({
@@ -19,14 +20,10 @@ const theme = createTheme({
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <Timeline />
+      <Bootcamp />
+      {/* <Timeline />
 
       <FAQSection />
-      {/* <div className="App min-vh-100 d-flex justify-content-center align-items-center">
-        <LongButtonWArrowCustomized />
-        <LongButtonWOArrowCustomized />
-        <ShortButtonCustomized />
-      </div> */}
       <div className="d-flex flex-lg-row flex-column justify-content-center align-items-center space-x-6 space-y-6">
         {profileData.map((m) => {
           return (
@@ -38,7 +35,7 @@ function App() {
             />
           );
         })}
-      </div>
+      </div> */}
     </ThemeProvider>
   );
 }
