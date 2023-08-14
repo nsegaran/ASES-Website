@@ -12,9 +12,9 @@ const ShortButtonCustomized = ({text}) => {
                     px: 2.5,
                     py: 1.5,
                     fontStyle: "Inter",
-                    fontSize: "1rem",
+                    fontSize: "calc(6px + 1.6vmin)",
                     textTransform: "none",
-                    border:"1.5px solid black",
+                    border:"1.3px solid black",
                     '&:hover': {
                         backgroundColor: 'black',
                         color: 'white',

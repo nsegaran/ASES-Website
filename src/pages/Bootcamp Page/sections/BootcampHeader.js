@@ -2,12 +2,13 @@ import React from "react";
 import ShortButton from "../../../components/ShortButton";
 import image from "../../../images/bootcamp-header.png";
 import video from "../../../images/bootcamp-hero-gradient.mp4";
+import ReactPlayer from "react-player";
 
 export default function BootcampHeader() {
   return (
-    <div className="w-full">
+    <div className="w-full border-b-2 border-black laptop:pb-24 mobile:pb-8">
       <video
-        className="absolute -z-10 w-auto object-cover mobile:min-h-full mobile:min-w-full laptop:min-w-none laptop:min-h-none x-0 y-0"
+        className="fixed -z-10 w-auto object-cover mobile:min-h-full mobile:min-w-full laptop:min-h-auto x-0 y-0"
         autoPlay
         loop
         muted
