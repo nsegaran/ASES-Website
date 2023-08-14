@@ -1,16 +1,26 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
+
 
 const TypingText = ({ words, noDelete, textStyle }) => {
   const [displayText, setDisplayText] = useState("");
   const [wordIndex, setWordIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
+  const typingTextRef = useRef(null);
 
   // Get the current word from the array
   const currentWord = words[wordIndex];
 
-  useEffect(() => {
+  // Intersection Observer callback function
+  const handleIntersection = (entries) => {
+    const [entry] = entries;
+    if (entry.isIntersecting) {
+      startTyping();
+    };
+  };
+
+  const startTyping = () => {
     const typingSpeed = 100; // Adjust typing speed in milliseconds
     const deleteSpeed = 100; // Adjust deleting speed in milliseconds
     const delay = isDeleting ? deleteSpeed : typingSpeed;
@@ -31,10 +41,35 @@ const TypingText = ({ words, noDelete, textStyle }) => {
     }, delay);
 
     return () => clearTimeout(timeoutId);
-  }, [displayText, isDeleting, currentWord, words, noDelete]);
+  };
+
+  useEffect(() => {
+    const options = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.5, // Adjust the threshold as needed to determine when the element is visible
+    };
+  
+    const observer = new IntersectionObserver(handleIntersection, options);
+  
+    // Create a local variable to store the current ref value
+    const targetNode = typingTextRef.current;
+  
+    if (targetNode) {
+      observer.observe(targetNode);
+    }
+  
+    // Use the local variable in the cleanup function
+    return () => {
+      if (targetNode) {
+        observer.unobserve(targetNode);
+      }
+    };
+  }, [typingTextRef, handleIntersection]);
+  
 
   return (
-    <Box textAlign="center">
+    <Box ref={typingTextRef} textAlign="center">
       <Typography sx={textStyle}>
         {displayText}
       </Typography>

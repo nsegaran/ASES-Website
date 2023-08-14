@@ -20,6 +20,7 @@ const Footer = () => {
         justifyContent: "space-between",
         padding: 10,
         alignItems: "center",
+        marginBottom: -20,
       }}
     >
       <Box>
