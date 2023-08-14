@@ -17,7 +17,7 @@ body {
     background-position: center center; 
     background-position-y: 17rem;
   }
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     .background-container {
         background-image: none;
     }

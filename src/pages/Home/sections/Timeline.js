@@ -21,7 +21,7 @@ export default function Timeline() {
         }}
       >
         <div
-          className="p pt-4 justify-start"
+          className="pt-4 justify-start"
           style={{ fontFamily: "Space Grotesk", textAlign: "left" }}
         >
           <h1 style={{ textAlign: "left" }}>Our Programs</h1>
