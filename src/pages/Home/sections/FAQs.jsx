@@ -1,7 +1,7 @@
 import { Accordion, AccordionSummary, AccordionDetails, Typography } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import FAQ from "../../../components/FAQ"
-import faqData from "../../../components/textContent/homeFAQData.json";
+import faqData from "../../../textContent/homeFAQData.json";
 
 
 export default function FAQSection() {

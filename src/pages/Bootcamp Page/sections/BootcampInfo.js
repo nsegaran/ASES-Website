@@ -1,4 +1,4 @@
-import ZeroToOne from "./zerotoone";
+import ZeroToOne from "../../../components/ZeroToOneComponent";
 import image from "../../../images/bootcamp-info.png";
 
 export default function BootcampInfo() {

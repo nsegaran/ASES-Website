@@ -7,7 +7,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { createTheme, ThemeProvider } from "@mui/material";
 import FAQSection from "./pages/Home/sections/FAQs";
 import Timeline from "./pages/Home/sections/Timeline";
-import profileData from "./components/textContent/homeProfileCards.json";
+import profileData from "./textContent/homeProfileCards.json";
 import Bootcamp from "./pages/Bootcamp Page/Bootcamp";
 import { motion } from "framer-motion";
 
