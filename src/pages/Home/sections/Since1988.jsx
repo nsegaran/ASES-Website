@@ -7,8 +7,8 @@ import TypingText from "../../../components/TypingText.jsx"
 export default function Since1988() {
   return (
     <Box
-      sx={{ background: "white", height: "500px", display: "flex", "@media (max-width: 600px)": {
-        flexDirection: "column", height: "1000px"
+      sx={{ background: "white", height: "500px", borderTop: "1px solid black", display: "flex", "@media (max-width: 600px)": {
+        flexDirection: "column", height: "1000px", position: "relative"
       },}}
     >
       <Box sx={{ flex: 1, borderRight: "1px solid black", padding: "3rem", "@media (max-width: 800px)": {
