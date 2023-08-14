@@ -9,6 +9,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { createTheme, ThemeProvider } from "@mui/material";
 import FAQSection from "./pages/Home/sections/FAQs";
 import Timeline from "./pages/Home/sections/Timeline";
+import profileData from "./textContent/homeProfileCards.json";
+import Bootcamp from "./pages/Bootcamp Page/Bootcamp";
 import Hero from "./pages/Home/sections/Hero";
 import Testimonials from "./pages/Home/sections/Testimonials";
 import profileData from "./components/textContent/homeProfileCards.json";
@@ -24,6 +26,7 @@ const theme = createTheme({
 function App() {
   return (
     <ThemeProvider theme={theme}>
+      <Bootcamp />
       <TopBar/>
       <Hero />
       <Since1988 />

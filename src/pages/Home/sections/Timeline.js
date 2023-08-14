@@ -1,5 +1,5 @@
 import TimelineComponentA from "../../../components/TimelineComponent-a";
-import timelineData from "../../../components/textContent/homeTimeline.json";
+import timelineData from "../../../textContent/homeTimeline.json";
 import { motion, useScroll } from "framer-motion";
 import "./stylesTimeline.css";
 
@@ -11,7 +11,15 @@ export default function Timeline() {
         className="progress-bar"
         style={{ scaleX: scrollYProgress }}
       />
-      <div className="background-container tablet:p-16 mobile:p-8">
+      <div
+        class="background-container"
+        style={{
+          padding: "4rem",
+          "@media (max-width: 800px)": {
+            padding: "2rem",
+          },
+        }}
+      >
         <div
           className="pt-4 justify-start"
           style={{ fontFamily: "Space Grotesk", textAlign: "left" }}

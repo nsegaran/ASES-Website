@@ -7,14 +7,14 @@ const ShortButtonCustomized = ({text}) => {
             <Button
                 sx={{
                     color: "black",
-                    backgroundColor: "white",
+                    backgroundColor: "transparent",
                     borderRadius: 2,
                     px: 2.5,
                     py: 1.5,
                     fontStyle: "Inter",
-                    fontSize: "1rm",
+                    fontSize: "calc(6px + 1.6vmin)",
                     textTransform: "none",
-                    border:"1px solid black",
+                    border:"1.3px solid black",
                     '&:hover': {
                         backgroundColor: 'black',
                         color: 'white',
