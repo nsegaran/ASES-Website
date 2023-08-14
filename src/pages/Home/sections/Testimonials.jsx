@@ -4,7 +4,7 @@ import Box from "@mui/material/Box";
 import Since1988Image from "../../../images/Since1988Image.png";
 import TypingText from "../../../components/TypingText.jsx";
 import ProfileCard from "../../../components/ProfileCard.jsx";
-import profileData from "../../../components/textContent/homeProfileCards.json";
+import profileData from "../../../textContent/homeProfileCards.json";
 import gradient from "./gradient.mp4";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import IconButton from "@mui/material/IconButton";

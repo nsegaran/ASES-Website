@@ -2,7 +2,6 @@ import React from "react";
 import ShortButton from "../../../components/ShortButton";
 import image from "../../../images/bootcamp-header.png";
 import video from "../../../images/bootcamp-hero-gradient.mp4";
-import ReactPlayer from "react-player";
 
 export default function BootcampHeader() {
   return (
