@@ -3,7 +3,7 @@ import image from "../../../images/bootcamp-info.png";
 
 export default function BootcampInfo() {
   return (
-    <div className="w-full bg-[#FCFAFF] flex mobile:flex-col-reverse laptop:flex-row laptop:justify-around mobile:justify-center">
+    <div className="w-full bg-[#FCFAFF] flex mobile:flex-col-reverse laptop:flex-row laptop:justify-around mobile:justify-center border-b-2 border-black">
       <div>
         <p
           className="text-[#667085] laptop:w-3/4 laptop:p-24 mobile:p-6"
