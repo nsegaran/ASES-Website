@@ -27,12 +27,12 @@ function App() {
       <Bootcamp />
       <TopBar />
       <Hero />
-      {/* <Since1988 />
-      <Testimonials/>
+      <Since1988 />
+      <Testimonials />
       <Timeline />
       <FAQSection />
       <Sponsors />
-      <Footer/> */}
+      <Footer />
     </ThemeProvider>
   );
 }

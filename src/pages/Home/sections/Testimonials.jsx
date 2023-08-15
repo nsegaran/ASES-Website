@@ -59,11 +59,13 @@ export default function Testimonials() {
         <TypingText
           textStyle={{
             fontFamily: "Space Grotesk",
-            fontSize: "60px",
+            fontSize: "calc(40px + 3vmin)",
+            fontWeight: "400",
+            lineHeight: "4rem",
             marginBottom: "3%",
             textAlign: "center",
             "@media (max-width: 800px)": {
-              marginBottom: "0px",
+              marginBottom: "5%",
             },
           }}
           words={["What our members say"]}
@@ -73,8 +75,9 @@ export default function Testimonials() {
         <Box
           sx={{
             display: "flex",
-            justifyContent: "space-between",
+            justifyContent: "center",
             alignItems: "center",
+            columnGap: "4rem"
           }}
         >
           {profileData.map((m) => {
