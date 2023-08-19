@@ -20,7 +20,7 @@ const SVGAnimation = () => {
   };
 
   return (
-    <div className="svg-container" style={{overflow: "hidden", position: "absolute"}}>
+    <div className="svg-container -z-1" style={{overflow: "hidden", position: "absolute"}}>
       <svg
         width="100vw"
         height="95vh"

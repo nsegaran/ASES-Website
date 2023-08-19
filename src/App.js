@@ -25,14 +25,14 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <Bootcamp />
-      <TopBar/>
+      <TopBar />
       <Hero />
-      <Since1988 />
-      <Testimonials/>
+      {/* <Since1988 /> */}
+      <Testimonials />
       <Timeline />
       <FAQSection />
       <Sponsors />
-      <Footer/>
+      {/* <Footer /> */}
     </ThemeProvider>
   );
 }

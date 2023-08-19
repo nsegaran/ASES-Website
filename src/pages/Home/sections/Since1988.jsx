@@ -41,7 +41,7 @@ export default function Since1988() {
           beyond Silicon Valley and solve global problems.
         </Typography>
       </Box>
-      <Box style={{ flex: 1, backgroundColor: "rgba(236, 132, 140, 0.44)", overflow: "hidden", height: "500px", width: "700px" }}>
+      <Box style={{ flex: 1, backgroundColor: "rgba(236, 132, 140, 0.44)", overflow: "hidden", height: "500px", width: "100%" }}>
   <img src={Since1988Image} alt={"Since1988Image"} style={{ height: "100%", width: "100%", objectFit: "cover" }} />
 </Box>
 
