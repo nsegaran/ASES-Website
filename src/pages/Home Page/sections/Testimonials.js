@@ -65,7 +65,7 @@ export default function Testimonials() {
             fontSize: "calc(30px + 3vmin)",
             fontWeight: "400",
             lineHeight: "2.5rem",
-            marginBottom: "3%",
+            marginBottom: "4%",
             textAlign: "center",
             "@media (max-width: 1024px)": {
               marginBottom: "calc(1% + 2vmin)",
