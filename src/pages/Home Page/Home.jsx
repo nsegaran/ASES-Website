@@ -1,4 +1,4 @@
-import Footer from "../../components/Footer.jsx"
+import Footer from "../../components/Footer.js"
 import Hero from "./sections/Hero.js"
 import Since1988 from "./sections/Since1988.js"
 import Testimonials from "./sections/Testimonials.js"
@@ -18,7 +18,7 @@ export default function Home(){
             <Timeline/>
             <FAQs/>
             <SponsorsBanner/>
-            {/* <Footer/> */}
+            <Footer/>
         </Box>
     );
 };
