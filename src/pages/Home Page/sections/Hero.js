@@ -15,7 +15,7 @@ export default function Hero() {
         borderBottom: "2px solid black",
       }}
     >
-      <SVGAnimation className="fixed top-0 left-0 -z-10" />
+      <SVGAnimation className="fixed top-0 left-0 -z-10 pt-4" />
       <div className="d-flex pt-8 laptop:flex-row mobile:flex-col px-8 mobile:px-0 w-full mobile:gap-y-8 tablet:gap-x-10 relative z-10 ">
         <div className="relative d-flex flex-col flex laptop:pt-9 laptop:pl-9 laptop:items-start mobile:items-center gap-y-10 mobile:px-8 laptop:ps-10 tablet:ms-10 mobile:text-center laptop:text-left">
           <h1
