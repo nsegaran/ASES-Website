@@ -10,7 +10,8 @@ import IconButton from "@mui/material/IconButton";
 import Drawer from "@mui/material/Drawer";
 import ListItem from "@mui/material/ListItem";
 import CloseIcon from "@mui/icons-material/Close";
-import { Divider } from "@mui/material";
+import { Link } from "react-router-dom";
+
 import "./TopBar.css";
 
 export default function ButtonAppBar() {
@@ -65,6 +66,7 @@ export default function ButtonAppBar() {
                   width: "35%",
                 }}
               >
+                <Link to="/" style={{ textDecoration: "none" }}>
                 <Typography
                   sx={{
                     fontFamily: "Inter",
@@ -76,6 +78,7 @@ export default function ButtonAppBar() {
                 >
                   Home
                 </Typography>
+                </Link>
                 <Typography
                   sx={{
                     fontFamily: "Inter",
@@ -86,7 +89,7 @@ export default function ButtonAppBar() {
                   }}
                 >
                   Programs
-                  <KeyboardArrowDownIcon />
+                  {/* <KeyboardArrowDownIcon /> */}
                 </Typography>
                 <Typography
                   sx={{
@@ -110,6 +113,7 @@ export default function ButtonAppBar() {
                 >
                   FAQ
                 </Typography>
+                <Link to="/team" style={{ textDecoration: "none" }}>
                 <Typography
                   sx={{
                     fontFamily: "Inter",
@@ -121,6 +125,7 @@ export default function ButtonAppBar() {
                 >
                   Team
                 </Typography>
+                </Link>
                 <Typography
                   sx={{
                     fontFamily: "Inter",
@@ -140,6 +145,7 @@ export default function ButtonAppBar() {
                   color: "#667085",
                   fontWeight: "bold",
                   marginRight: "20px",
+                  visibility: "hidden",
                 }}
               >
                 Login/Sign Up

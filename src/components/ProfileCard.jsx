@@ -8,34 +8,32 @@ import React from "react";
 import { useState } from "react";
 
 
-const ProfileCard = ({name, role, hoveredText, image}) => {
+const ProfileCard = ({name, role, hoveredText, image, hover}) => {
     const [isHovered, setIsHovered] = useState(false);
     return (
         <>
             <Card sx={{
-                width: "300px",
-                height: "400px",
-                backgroundColor: 'F8F9FC',
-                border: "1px solid black",
-                borderRadius: 3,
-                '&:hover': {
-                    backgroundColor: 'black'
-                }
-            }}
+        width: "300px",
+        height: "400px",
+        backgroundColor: hover ? 'black' : 'transparent', // Set transparent background if hover is false
+        border: "1px solid black",
+        borderRadius: 3,
+    }}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
             >
-                {!isHovered && (
+                {(!isHovered || !hover)&& (
                     <>
                         <CardMedia 
                         sx={{ 
                             height: "83%",
                             borderBottom: "1px solid black",
+                            backgroundColor: "white",
                         }}
                         image={image}
                         title="Profile Image"
                         />
-                        <CardContent sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                        <CardContent sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', backgroundColor: "white"}}>
                             <Typography color="text.primary" align="center">
                                 {name}
                             </Typography>
@@ -46,7 +44,7 @@ const ProfileCard = ({name, role, hoveredText, image}) => {
 
                     </>
                 )}
-                {isHovered && (
+                {isHovered && hover && (
                     <>
                         <CardContent>
                             <Typography variant="body2" color="white">
