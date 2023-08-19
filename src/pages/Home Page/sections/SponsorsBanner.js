@@ -13,32 +13,40 @@ const SponsorsBanner = () => {
   const images = [Pear, Renn, Softbank, Think, WIL, ZhenFund];
 
   return (
-    <Box sx={{borderTop: "1px solid black"}}>
-        <Typography sx={{fontFamily: "Space Grotesk", fontSize: 30, fontWeight: 600, textAlign: "center", marginTop: 2}}>
-            Sponsored by
-        </Typography>
-    <Box className="logo-slider">
-      <Box className="logos">
-        {images.map((image, index) => (
-          <img
-            key={index}
-            src={image}
-            alt={`Sponsor Logos`}
-            className="logo"
-          />
-        ))}
+    <Box sx={{ borderTop: "1px solid black", background: "white" }}>
+      <Typography
+        sx={{
+          fontFamily: "Space Grotesk",
+          fontSize: 30,
+          fontWeight: 600,
+          textAlign: "center",
+          marginTop: 2,
+        }}
+      >
+        Sponsored by
+      </Typography>
+      <Box className="logo-slider">
+        <Box className="logos">
+          {images.map((image, index) => (
+            <img
+              key={index}
+              src={image}
+              alt={`Sponsor Logos`}
+              className="logo"
+            />
+          ))}
+        </Box>
+        <Box className="logos">
+          {images.map((image, index) => (
+            <img
+              key={index}
+              src={image}
+              alt={`Sponsor Logos`}
+              className="logo"
+            />
+          ))}
+        </Box>
       </Box>
-      <Box className="logos">
-        {images.map((image, index) => (
-          <img
-            key={index}
-            src={image}
-            alt={`Sponsor Logos`}
-            className="logo"
-          />
-        ))}
-      </Box>
-    </Box>
     </Box>
   );
 };

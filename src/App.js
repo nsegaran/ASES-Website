@@ -1,9 +1,9 @@
 import "./App.css";
-import Home from "./pages/Home Page/Home.jsx"
+import Home from "./pages/Home Page/Home.jsx";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Team from "./pages/Team Page/Team.jsx"
-import Bootcamp from "./pages/Bootcamp Page/Bootcamp.js"
-import { BrowserRouter, Route, Routes} from "react-router-dom";
+import Team from "./pages/Team Page/Team.jsx";
+import Bootcamp from "./pages/Bootcamp Page/Bootcamp.js";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
   return (

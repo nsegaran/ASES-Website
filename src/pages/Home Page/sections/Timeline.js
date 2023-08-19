@@ -7,12 +7,12 @@ export default function Timeline() {
   const { scrollYProgress } = useScroll();
   return (
     <>
-      <motion.div
+      {/* {/* <motion.div
         className="progress-bar"
         style={{ scaleX: scrollYProgress }}
-      />
+      /> */}
       <div
-        class="background-container"
+        class="background-container bg-white"
         style={{
           padding: "4rem",
           "@media (max-width: 800px)": {

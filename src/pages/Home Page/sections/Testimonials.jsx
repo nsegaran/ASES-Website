@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Box from "@mui/material/Box";
 import Since1988Image from "../../../images/Since1988Image.png";
 import TypingText from "../../../components/TypingText.jsx";
-import ProfileCard from "../../../components/ProfileCard.jsx";
+import ProfileCard from "../../../components/ProfileCard.js";
 import profileData from "../../../textContent/homeProfileCards.json";
 import gradient from "./gradient.mp4";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
@@ -49,20 +49,21 @@ export default function Testimonials() {
       </video>
       <Box
         sx={{
-          padding: "5rem",
-          "@media (max-width: 800px)": {
-            padding: "1rem",
-          },
+          padding: "2 rem",
+          paddingY: "5rem"
         }}
       >
         <TypingText
           textStyle={{
             fontFamily: "Space Grotesk",
-            fontSize: "60px",
+            fontSize: "calc(30px + 3vmin)",
+            fontWeight: "400",
+            lineHeight: "2.5rem",
             marginBottom: "3%",
             textAlign: "center",
-            "@media (max-width: 800px)": {
-              marginBottom: "0px",
+            "@media (max-width: 1024px)": {
+              marginBottom: "calc(1% + 2vmin)",
+              padding: "calc(1rem + 1vmin)"
             },
           }}
           words={["What our members say"]}
@@ -72,8 +73,10 @@ export default function Testimonials() {
         <Box
           sx={{
             display: "flex",
-            justifyContent: "space-between",
+            justifyContent: "center",
             alignItems: "center",
+            columnGap: "4rem",
+            
           }}
         >
           {profileData.map((m) => {
@@ -94,14 +97,20 @@ export default function Testimonials() {
           
           sx={{
             display: "flex",
-            justifyContent: "space-between",
+            justifyContent: "center",
             alignItems: "center",
+            columnGap: "0.4rem",
+            // paddingTop:"2rem",
+            // // padding:"5rem",
+            "@media (max-width: 500px)": {
+              padding: "1rem",
+            },
           }}
         >
           <IconButton
             edge="start"
             onClick={handleBackCard}
-            sx={{ backgroundColor: "black", borderRadius: 3 }}
+            sx={{ backgroundColor: "black", borderRadius: 3, marginStart:"3rem" }}
           >
             <NavigateBeforeIcon sx={{ color: "white" }} />
           </IconButton>
@@ -112,7 +121,7 @@ export default function Testimonials() {
             image={profileData[currentCardIndex].image}
           />
           <IconButton
-            edge="start"
+            edge="end"
             onClick={handleNextCard}
             sx={{ backgroundColor: "black", borderRadius: 3 }}
           >
