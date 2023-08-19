@@ -14,7 +14,7 @@ const ProfileCard = ({ name, role, hoveredText, image }) => {
       <Card
         sx={{
           width: "270px",
-          height: "calc(290px + 3.2vmin)",
+          height: "calc(308px + 3.2vmin)",
           backgroundColor: "F8F9FC",
           border: "1px solid black",
           borderRadius: 3,
@@ -29,7 +29,7 @@ const ProfileCard = ({ name, role, hoveredText, image }) => {
           <>
             <CardMedia
               sx={{
-                height: "calc(230px + 2vmin)",
+                height: "calc(250px + 2vmin)",
                 borderBottom: "1px solid black",
               }}
               image={image}
