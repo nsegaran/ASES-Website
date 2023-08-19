@@ -31,6 +31,7 @@ export default function Testimonials() {
         borderTop: "1px solid black",
         position: "relative",
         overflow: "hidden",
+        paddingBottom: "1rem",
       }}
     >
       <video
