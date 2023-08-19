@@ -4,22 +4,14 @@
 }
 
 /* Show desktop elements for screen widths equal to or above 768px */
-<<<<<<< HEAD:src/pages/Home Page/sections/Testimonials.css
-@media (min-width: 640px) {
-=======
 @media (min-width: 1024px) {
->>>>>>> main:src/pages/Home/sections/Testimonials.css
   .desktop {
     display: block;
   }
 }
 
 /* Show mobile elements for screen widths below 768px */
-<<<<<<< HEAD:src/pages/Home Page/sections/Testimonials.css
-@media (max-width: 640px) {
-=======
-@media (max-width: 1024px) {
->>>>>>> main:src/pages/Home/sections/Testimonials.css
+@media (max-width: 1023px) {
   .mobile {
     display: block;
   }

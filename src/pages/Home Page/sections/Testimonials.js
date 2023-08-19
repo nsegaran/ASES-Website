@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Since1988Image from "../../../images/Since1988Image.png";
 import TypingText from "../../../components/TypingText.jsx";
@@ -26,7 +27,8 @@ export default function Testimonials() {
   return (
     <Box
       sx={{
-        borderBottom: "1px solid black", borderTop: "1px solid black",
+        borderBottom: "1px solid black",
+        borderTop: "1px solid black",
         position: "relative",
         overflow: "hidden",
       }}
@@ -49,8 +51,11 @@ export default function Testimonials() {
       </video>
       <Box
         sx={{
-          padding: "2 rem",
-          paddingY: "5rem"
+          padding: "2rem",
+          paddingY: "5rem",
+          "@media (max-width: 1024px)": {
+            padding: "1rem",
+          },
         }}
       >
         <TypingText
@@ -63,72 +68,71 @@ export default function Testimonials() {
             textAlign: "center",
             "@media (max-width: 1024px)": {
               marginBottom: "calc(1% + 2vmin)",
-              padding: "calc(1rem + 1vmin)"
+              padding: "calc(1rem + 1vmin)",
             },
           }}
           words={["What our members say"]}
           noDelete={true}
         />
         <Box className="desktop">
-        <Box
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            columnGap: "4rem",
-            
-          }}
-        >
-          {profileData.map((m) => {
-            return (
-              <ProfileCard
-                name={m.name}
-                role={m.role}
-                hoveredText={m.description}
-                image={m.image}
-                hover={true}
-              />
-            );
-          })}
-        </Box>
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              columnGap: "4rem",
+            }}
+          >
+            {profileData.map((m) => {
+              return (
+                <ProfileCard
+                  name={m.name}
+                  role={m.role}
+                  hoveredText={m.description}
+                  image={m.image}
+                />
+              );
+            })}
+          </Box>
         </Box>
         <Box className="mobile">
-        <Box
-          
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            columnGap: "0.4rem",
-            // paddingTop:"2rem",
-            // // padding:"5rem",
-            "@media (max-width: 500px)": {
-              padding: "1rem",
-            },
-          }}
-        >
-          <IconButton
-            edge="start"
-            onClick={handleBackCard}
-            sx={{ backgroundColor: "black", borderRadius: 3, marginStart:"3rem" }}
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              columnGap: "0.4rem",
+              "@media (max-width: 500px)": {
+                padding: "1rem",
+              },
+            }}
           >
-            <NavigateBeforeIcon sx={{ color: "white" }} />
-          </IconButton>
-          <ProfileCard
-            name={profileData[currentCardIndex].name}
-            role={profileData[currentCardIndex].role}
-            hoveredText={profileData[currentCardIndex].description}
-            image={profileData[currentCardIndex].image}
-          />
-          <IconButton
-            edge="end"
-            onClick={handleNextCard}
-            sx={{ backgroundColor: "black", borderRadius: 3 }}
-          >
-            <NavigateNextIcon sx={{ color: "white" }} />
-          </IconButton>
+            <IconButton
+              edge="start"
+              onClick={handleBackCard}
+              sx={{
+                backgroundColor: "black",
+                borderRadius: 3,
+                marginStart: "3rem",
+              }}
+            >
+              <NavigateBeforeIcon sx={{ color: "white" }} />
+            </IconButton>
+            <ProfileCard
+              name={profileData[currentCardIndex].name}
+              role={profileData[currentCardIndex].role}
+              hoveredText={profileData[currentCardIndex].description}
+              image={profileData[currentCardIndex].image}
+            />
+            <IconButton
+              edge="end"
+              onClick={handleNextCard}
+              sx={{ backgroundColor: "black", borderRadius: 3 }}
+            >
+              <NavigateNextIcon sx={{ color: "white" }} />
+            </IconButton>
+          </Box>
         </Box>
-      </Box>
       </Box>
     </Box>
   );

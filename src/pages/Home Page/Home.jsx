@@ -1,7 +1,7 @@
 import Footer from "../../components/Footer.jsx"
 import Hero from "./sections/Hero.js"
 import Since1988 from "./sections/Since1988.jsx"
-import Testimonials from "./sections/Testimonials.jsx"
+import Testimonials from "./sections/Testimonials.js"
 import Timeline from "./sections/Timeline.js"
 import FAQs from "./sections/FAQs.jsx"
 import SponsorsBanner from "./sections/SponsorsBanner.js"
@@ -13,12 +13,12 @@ export default function Home(){
         <Box>
             <TopBar/>
             <Hero/>
-            <Since1988/>
+            {/* <Since1988/> */}
             <Testimonials/>
             <Timeline/>
             <FAQs/>
             <SponsorsBanner/>
-            <Footer/>
+            {/* <Footer/> */}
         </Box>
     );
 };
