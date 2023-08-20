@@ -11,6 +11,7 @@ import Drawer from "@mui/material/Drawer";
 import ListItem from "@mui/material/ListItem";
 import CloseIcon from "@mui/icons-material/Close";
 import { Link } from "react-router-dom";
+// import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 
 import "./TopBar.css";
 
@@ -26,7 +27,15 @@ export default function ButtonAppBar() {
   };
 
   return (
-    <Box>
+    <Box
+      sx={{
+        position: "sticky",
+        width: "100%",
+        backgroundColor: "white",
+        zIndex: "20",
+        top: "0",
+      }}
+    >
       <Box className="desktop" sx={{ flexGrow: 1 }}>
         <AppBar position="static" elevation={0}>
           <Toolbar
@@ -67,76 +76,85 @@ export default function ButtonAppBar() {
                 }}
               >
                 <Link to="/" style={{ textDecoration: "none" }}>
-                <Typography
-                  sx={{
-                    fontFamily: "Inter",
-                    fontSize: 16,
-                    color: "#667085",
-                    fontWeight: "bold",
-                    marginRight: "20px",
-                  }}
-                >
-                  Home
-                </Typography>
+                  <Typography
+                    sx={{
+                      fontFamily: "Inter",
+                      fontSize: 16,
+                      color: "#667085",
+                      fontWeight: "bold",
+                      marginRight: "20px",
+                    }}
+                  >
+                    Home
+                  </Typography>
                 </Link>
-                <Typography
-                  sx={{
-                    fontFamily: "Inter",
-                    fontSize: 16,
-                    color: "#667085",
-                    fontWeight: "bold",
-                    marginRight: "20px",
-                  }}
-                >
-                  Programs
-                  {/* <KeyboardArrowDownIcon /> */}
-                </Typography>
-                <Typography
-                  sx={{
-                    fontFamily: "Inter",
-                    fontSize: 16,
-                    color: "#667085",
-                    fontWeight: "bold",
-                    marginRight: "20px",
-                  }}
-                >
-                  About
-                </Typography>
-                <Typography
-                  sx={{
-                    fontFamily: "Inter",
-                    fontSize: 16,
-                    color: "#667085",
-                    fontWeight: "bold",
-                    marginRight: "20px",
-                  }}
-                >
-                  FAQ
-                </Typography>
+                <a href="/#programsHome" style={{ textDecoration: "none" }}>
+                  <Typography
+                    sx={{
+                      fontFamily: "Inter",
+                      fontSize: 16,
+                      color: "#667085",
+                      fontWeight: "bold",
+                      marginRight: "20px",
+                    }}
+                  >
+                    Programs
+                    {/* <KeyboardArrowDownIcon /> */}
+                  </Typography>
+                  {/* </ScrollLink> */}
+                </a>
+                <a href="/#about" style={{ textDecoration: "none" }}>
+                  <Typography
+                    sx={{
+                      fontFamily: "Inter",
+                      fontSize: 16,
+                      color: "#667085",
+                      fontWeight: "bold",
+                      marginRight: "20px",
+                    }}
+                  >
+                    About
+                  </Typography>
+                </a>
+                <a href="/#faq" style={{ textDecoration: "none" }}>
+                  <Typography
+                    sx={{
+                      fontFamily: "Inter",
+                      fontSize: 16,
+                      color: "#667085",
+                      fontWeight: "bold",
+                      marginRight: "20px",
+                    }}
+                  >
+                    FAQ
+                  </Typography>
+                </a>
                 <Link to="/team" style={{ textDecoration: "none" }}>
-                <Typography
-                  sx={{
-                    fontFamily: "Inter",
-                    fontSize: 16,
-                    color: "#667085",
-                    fontWeight: "bold",
-                    marginRight: "20px",
-                  }}
-                >
-                  Team
-                </Typography>
+                  <Typography
+                    sx={{
+                      fontFamily: "Inter",
+                      fontSize: 16,
+                      color: "#667085",
+                      fontWeight: "bold",
+                      marginRight: "20px",
+                    }}
+                  >
+                    Team
+                  </Typography>
                 </Link>
-                <Typography
-                  sx={{
-                    fontFamily: "Inter",
-                    fontSize: 16,
-                    color: "#667085",
-                    fontWeight: "bold",
-                    marginRight: "20px",
-                  }}
-                >
-                  Sponsors
-                </Typography>
+                <a href="/#sponsors" style={{ textDecoration: "none" }}>
+                  <Typography
+                    sx={{
+                      fontFamily: "Inter",
+                      fontSize: 16,
+                      color: "#667085",
+                      fontWeight: "bold",
+                      marginRight: "20px",
+                    }}
+                  >
+                    Sponsors
+                  </Typography>
+                </a>
               </Box>
               <Typography
                 sx={{
@@ -197,36 +215,44 @@ export default function ButtonAppBar() {
           </Toolbar>
         </AppBar>
       </Box>
-      <Drawer className="mobile" anchor="right" open={isDrawerOpen} onClose={handleDrawerClose}>
-        <Box sx={{ display: "flex", justifyContent: "space-between", marginTop: 1}}>
+      <Drawer
+        className="mobile"
+        anchor="right"
+        open={isDrawerOpen}
+        onClose={handleDrawerClose}
+      >
         <Box
+          sx={{
+            display: "flex",
+            justifyContent: "space-between",
+            marginTop: 1,
+          }}
+        >
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "space-between",
+              width: "100%",
+              alignItems: "center",
+              marginLeft: 1,
+              whiteSpace: "nowrap",
+              marginRight: 10,
+            }}
+          >
+            <img src={Logo} alt={"ases logo"}></img>
+            <Typography
               sx={{
-                display: "flex",
-                flexDirection: "row",
-                justifyContent: "space-between",
-                width: "100%",
-                alignItems: "center",
+                fontFamily: "Space Grotesk",
+                fontSize: 30,
+                color: "#101828",
+                fontWeight: "bold",
                 marginLeft: 1,
-                whiteSpace: "nowrap",
-                marginRight: 10,
               }}
             >
-              <img
-              src={Logo}
-              alt={"ases logo"}
-            ></img>
-              <Typography
-                sx={{
-                  fontFamily: "Space Grotesk",
-                  fontSize: 30,
-                  color: "#101828",
-                  fontWeight: "bold",
-                  marginLeft: 1,
-                }}
-              >
-                ASES
-              </Typography>
-              </Box>
+              ASES
+            </Typography>
+          </Box>
           <IconButton edge="start" onClick={handleDrawerClose}>
             <CloseIcon sx={{ color: "#667085" }} />
           </IconButton>
