@@ -10,7 +10,7 @@ export default function Hero() {
     <div
       style={{
         height: "95vh",
-        background: "white",
+        background: "#FCFAFF",
         overflow: "hidden",
         borderBottom: "2px solid black",
       }}

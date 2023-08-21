@@ -13,8 +13,8 @@ const LongButtonWOArrowCustomized = ({text}) => {
                     borderRadius: 3,
                     px: 18,
                     py: 2,
-                    fontStyle: "Inter",
-                    fontSize: 22,
+                    fontFamily: "Inter",
+                    fontSize: "calc(6px + 1.4vmin)",
                     textTransform: "none",
                     '&:hover': {
                         backgroundColor: 'white',

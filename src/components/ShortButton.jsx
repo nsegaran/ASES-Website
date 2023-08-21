@@ -11,8 +11,8 @@ const ShortButtonCustomized = ({text}) => {
                     borderRadius: 2,
                     px: 2.5,
                     py: 1.5,
-                    fontStyle: "Inter",
-                    fontSize: "calc(6px + 1.6vmin)",
+                    fontFamily: "Inter",
+                    fontSize: "calc(6px + 1.4vmin)",
                     textTransform: "none",
                     border:"1.3px solid black",
                     '&:hover': {
