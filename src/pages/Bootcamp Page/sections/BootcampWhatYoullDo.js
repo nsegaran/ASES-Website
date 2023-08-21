@@ -3,7 +3,7 @@ import data from "../../../textContent/bootcampWhatYoullDo.json";
 
 export default function BootcampWhatYoullDo() {
   return (
-    <div className="bg-white laptop:p-24 mobile:pt-20">
+    <div className="bg-white laptop:p-24 mobile:pt-20 border-b-2 border-black">
       <div className="flex laptop:flew-row mobile:justify-center laptop:justify-between laptop:items-start mobile:items-center laptop:text-start mobile:text-center laptop:pb-12 mobile:pb-8">
         <h1
           style={{
